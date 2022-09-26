@@ -140,6 +140,9 @@ header{
     background-size: cover;
     padding-top: 200px;
     padding-bottom: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1600px;
     text-align: center;
 }
 .banner-title{
@@ -310,22 +313,24 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 170px;
-    height: 92px;
-    padding: 16px 32px;
-    border: 1px solid var(--fiil-social-color);
-    border-radius: 4px;
+    
+       
 }
-.client-list-item:hover,
-.client-list-item:focus{
-    border-color: var(--accent-color);
-    color: var(--accent-color);
-}
+
 .client-item-svg{
     display: flex;
+    width: 170px;
+    height: 92px;
     justify-content: center;
     align-items: center;
-    color: currentColor;
+    border: 1px solid var(--fiil-social-color);
+    border-radius: 4px;
+    color: var(--fiil-social-color);
+}
+.client-item-svg:hover,
+.client-item-svg:focus{
+    border-color: var(--accent-color);
+    color: var(--accent-color);
 }
 .client-svg{
     fill: currentColor;
@@ -338,6 +343,7 @@ footer{
 }
 .footer-items{
     display: flex;
+    align-items: baseline;
 }
 .footer-addres{
     margin-right: 70px;
@@ -370,14 +376,24 @@ footer .logo{
     font-size: 14px;
     line-height: 1.14;
     color: var(--prymary-white-color);
-    
+    text-transform: uppercase;
 }
 
 .footer-social-list{
     display: flex;
-    
+    justify-content: space-between;
 }
 .footer-social-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.footer-social-item:not(:last-child){
+    margin-right: 10px;
+}
+.footer-social-link{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -385,16 +401,11 @@ footer .logo{
     height: 44px;
     background-color: var(--fill-social-secondary);
     border-radius: 50%;
-}
-.footer-social-item:hover,
-.footer-social-item:focus{
-    background-color: var(--accent-color);
-}
-.footer-social-item:not(:last-child){
-    margin-right: 10px;
-}
-.footer-social-link{
     color: var(--prymary-white-color);
+}
+.footer-social-link:hover,
+.footer-social-link:focus{
+    background-color: var(--accent-color);
 }
 
 .footer-svg{
@@ -443,7 +454,12 @@ footer .logo{
     
 }
 .examples-list-link{
+    display: block;
     text-decoration: none;
+}
+.examples-list-link:hover,
+.examples-list-link:focus{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .examples-list-img{
     display: block;
